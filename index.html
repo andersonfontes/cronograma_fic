@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronograma - Gestão de Projetos Ágeis (SENAI)</title>
+    <style>
+        :root {
+            --senai-red: #D82C1F;
+            --white: #FFFFFF;
+            --text-dark: #333333;
+            --light-grey: #f4f4f4;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--light-grey);
+            color: var(--text-dark);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--white);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        header {
+            background-color: var(--senai-red);
+            color: var(--white);
+            padding: 25px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+            text-transform: uppercase;
+        }
+        
+        header p {
+            margin-top: 5px;
+            font-size: 1em;
+            opacity: 0.9;
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid var(--light-grey);
+        }
+
+        .accordion-header {
+            background-color: var(--white);
+            color: var(--senai-red);
+            padding: 15px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+        }
+
+        .accordion-header:hover {
+            background-color: rgba(216, 44, 31, 0.05); /* Light red hover */
+        }
+        
+        .accordion-header.active {
+            background-color: var(--senai-red);
+            color: var(--white);
+        }
+        
+        .accordion-header.active .toggle-icon {
+            color: var(--white);
+            transform: rotate(180deg);
+        }
+        
+        .toggle-icon {
+            font-size: 1.5em;
+            line-height: 1;
+            transition: transform 0.3s;
+            color: var(--senai-red);
+        }
+
+        .accordion-content {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+            background-color: var(--white);
+        }
+
+        .accordion-content-inner {
+            padding: 15px 0 20px 0;
+            border-top: 1px dashed var(--light-grey);
+            margin-top: 0;
+        }
+
+        .accordion-content h3 {
+            color: var(--senai-red);
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .accordion-content ul {
+            list-style: disc;
+            margin-left: 20px;
+            padding-left: 0;
+        }
+        
+        .accordion-content li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Cronograma do Curso de Gestão de Projetos com Metodologias Ágeis</h1>
+            <p>SENAI Morvan Figueiredo • Carga Horária: 30h • 4 Sábados de 8h</p>
+        </header>
+
+        <div class="accordion-item">
+            <div class="accordion-header" data-content="content1">
+                <span>Sábado 1: 25/10 (8h) - Módulo I: Fundamentos Ágeis e o Mindset</span>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="accordion-content" id="content1">
+                <div class="accordion-content-inner">
+                    <h3>Conteúdo (7,5h)</h3>
+                    <ul>
+                        <li>**Introdução:** Boas-vindas, Objetivos do Curso, Perfil de Conclusão.</li>
+                        <li>**Gestão Tradicional vs. Ágil:** Modelos Preditivos (Cascata/Gantt) e suas Limitações.</li>
+                        <li>**O que é "Ser Ágil":** Contexto e Conceitos Iniciais de Metodologias Ágeis.</li>
+                        <li>**Manifesto Ágil:** Estudo dos 4 Valores e 12 Princípios.</li>
+                    </ul>
+                    <h3>Atividades (Materiais e Sugestões)</h3>
+                    <ul>
+                        <li>Análise de falhas em projetos tradicionais (ex: a imagem "Como o cliente explicou").</li>
+                        <li>Debate focado no princípio: "Responder a mudanças mais que seguir um plano."</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" data-content="content2">
+                <span>Sábado 2: 01/11 (8h) - Módulo II: Estrutura e Artefatos do SCRUM</span>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="accordion-content" id="content2">
+                <div class="accordion-content-inner">
+                    <h3>Conteúdo (7,5h)</h3>
+                    <ul>
+                        <li>**Visão Geral do Scrum:** Definição, foco em valor e modelo incremental.</li>
+                        <li>**Papéis (Roles):** Product Owner (PO), Scrum Master (SM) e Dev Team.</li>
+                        <li>**Histórias de Usuário (User Stories):** Conceito e Prática de Escrita (Como..., Eu quero..., Para que...).</li>
+                        <li>**Artefatos:** Product Backlog (Priorização por valor) e Sprint Backlog.</li>
+                    </ul>
+                    <h3>Atividades (Materiais e Sugestões)</h3>
+                    <ul>
+                        <li>Criação de Histórias de Usuário para um projeto de exemplo.</li>
+                        <li>Prática de Priorização de Backlog por valor de negócio.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" data-content="content3">
+                <span>Sábado 3: 08/11 (8h) - Módulo III: O Ciclo de Vida do SCRUM</span>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="accordion-content" id="content3">
+                <div class="accordion-content-inner">
+                    <h3>Conteúdo (7,5h)</h3>
+                    <ul>
+                        <li>**O Ciclo da Sprint:** Entendimento do *time-box* (tempo fixo).</li>
+                        <li>**Evento:** Sprint Planning (Planejamento da Sprint).</li>
+                        <li>**Evento:** Daily Scrum (Reunião Diária de 15 minutos).</li>
+                        <li>**Evento:** Sprint Review (Demonstração e Validação do Incremento).</li>
+                        <li>**Evento:** Sprint Retrospective (Inspeção e Adaptação do Processo da Equipe).</li>
+                    </ul>
+                    <h3>Atividades (Materiais e Sugestões)</h3>
+                    <ul>
+                        <li>**Sugestão:** Simulação de um Ciclo Scrum (Mini-Sprint): Formação de equipes e execução dos eventos (Planning, Daily).</li>
+                        <li>Prática de Daily Scrum (foco nas 3 perguntas: O que fiz ontem? O que farei hoje? Quais impedimentos?).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" data-content="content4">
+                <span>Sábado 4: 29/11 (8h) - Módulo IV: Outras Práticas e Finalização</span>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="accordion-content" id="content4">
+                <div class="accordion-content-inner">
+                    <h3>Conteúdo (7,5h)</h3>
+                    <ul>
+                        <li>**Kanban:** Conceito, visualização do fluxo de trabalho (quadro), Limites WIP.</li>
+                        <li>**Outras Metodologias:** Visão geral de Lean e eXtreme Programming (XP).</li>
+                        <li>**Sugestão de Novo Tema:** Métricas Ágeis (Burndown Chart, Velocity) e Ferramentas (Trello/Jira).</li>
+                        <li>**Comunicação e Gestão de Stakeholders em Projetos Ágeis.**</li>
+                    </ul>
+                    <h3>Atividades (Materiais e Sugestões)</h3>
+                    <ul>
+                        <li>Workshop de Kanban (uso de quadro físico/virtual).</li>
+                        <li>**Atividade Final:** Apresentação dos resultados da Mini-Sprint (iniciada no Sáb. 3).</li>
+                        <li>Avaliação Final do Curso (Revisão e Feedback, incluindo a Retrospectiva da Mini-Sprint).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const headers = document.querySelectorAll('.accordion-header');
+
+            headers.forEach(header => {
+                header.addEventListener('click', () => {
+                    const contentId = header.getAttribute('data-content');
+                    const content = document.getElementById(contentId);
+                    
+                    // Toggle the active class on the header
+                    const isActive = header.classList.contains('active');
+                    
+                    // Close all other open contents
+                    document.querySelectorAll('.accordion-header').forEach(h => {
+                        h.classList.remove('active');
+                        const openContent = document.getElementById(h.getAttribute('data-content'));
+                        openContent.style.maxHeight = 0;
+                        openContent.style.padding = '0 25px';
+                        h.querySelector('.toggle-icon').style.transform = 'rotate(0deg)';
+                    });
+
+                    // Open the clicked content if it wasn't active
+                    if (!isActive) {
+                        header.classList.add('active');
+                        content.style.maxHeight = content.scrollHeight + 30 + 'px'; // +30 for padding/margin inside
+                        content.style.padding = '0 25px';
+                        header.querySelector('.toggle-icon').style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
